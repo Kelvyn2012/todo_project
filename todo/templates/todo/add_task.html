@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% block title %} Add Task {% endblock %} {% block
+content %}
+<h1 class="text-2xl font-semibold mb-4">Add Task</h1>
+<form method="post" class="space-y-4">
+  {% csrf_token %} {{ form.as_p }}
+  <button
+    type="submit"
+    class="bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600"
+  >
+    Add
+  </button>
+</form>
+<a
+  href="{% url 'task_list' %}"
+  class="inline-block mt-4 text-blue-600 hover:underline"
+  >Back</a
+>
+{% endblock %}

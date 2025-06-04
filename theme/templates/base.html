@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{% block title %}TODO App{% endblock %}</title>
+    {% load static %}
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" />
+  </head>
+  <body class="bg-gray-100 text-gray-800 p-6">
+    <div class="max-w-2xl mx-auto">{% block content %}{% endblock %}</div>
+  </body>
+</html>
